@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
     <title>Zachariah Dellimore</title>
     <link rel="icon" href="media/icon.ico">
 </head>
@@ -13,10 +14,15 @@
             margin-left: auto;
             margin-right: auto;
             border-radius: 25px;
+            align-self: center;
         }
         iframe{
             display:block;
             margin: 0 auto;
+        }
+        form{
+            position:-webkit-sticky;
+            position: sticky;
         }
         .center{
             font-family:'Courier New';
@@ -42,8 +48,42 @@
             font-size: 350%;
         }
 
+        .button1{
+            background: transparent url(https://zachariahdellimore.netlify.app/webapps);
+            background-color: aliceblue;
+            border-radius: 25px;
+            padding: 5px;
+
+        }
+        .button2{
+            background: transparent url(https://zachariahdellimore.netlify.app/webapps);
+            background-color: aliceblue;
+            border-radius: 25px;
+            padding: 5px;
+        }
+        .container{
+            position: absolute;
+            margin-left: 4%;
+            margin-top: 2%;
+            top: 2%;
+        }
+        .container2{
+            display: block;
+        }
+
     </style>
     <body style="background-color: rgb(67, 67, 78)"><!--rgb(236, 238, 245)-->
+        <section>
+        <div class="container">
+        <form>
+        <input id="About Me"class="button1" type="image" src="media/AboutMeIcon.png" name = "About Me" width="75" height="75" alt="WebApp" formaction="index.html">
+        </form>
+        <br>
+        <form>
+        <input id="webApp"class="button2" type="image" src="media/webAppIcon.png" name = "My Web Apps" width="75" height="75" alt="WebApp" formaction="webApps.html">  
+        </form>
+        </div>
+        <div class="container2">
         <article>
         <br>
         <br>
@@ -83,6 +123,8 @@
             language, and a fully customizable minesweeper
             video game made in C++ using the SFML game development library.
         </font>
+        <input type = "radio" id="temperature" name="temperature" value="temperature" checked>
+        <label for="temperature">temperature</label>
         <p class="font2"><strong>Resumé</strong></p>
         <iframe src="media/Resume.pdf" width="85%" height="900px" margin="0 auto">
         </iframe> 
@@ -91,5 +133,8 @@
         <br>
         </p>
     </article>
+    </div>
+    </section>
+    <script src = "scripts.js"></script>
     </body>
 </html>
