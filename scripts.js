@@ -24,8 +24,8 @@ updateWeather(); */
 
 
 //PROJECT 1
-const closedFace = document.querySelector('.closed')
-const openFace = document.querySelector('.open')
+const closedFace = document.querySelector('.closed');
+const openFace = document.querySelector('.open');
 
 // Add event listener
 closedFace.addEventListener('mouseover', () => {
@@ -33,13 +33,13 @@ closedFace.addEventListener('mouseover', () => {
         openFace.classList.add('active');
         closedFace.classList.remove('active');
     }
-})
+});
 openFace.addEventListener('mouseleave', () => {
     if(closedFace.classList.contains('closed')){
         closedFace.classList.add('active');
         openFace.classList.remove('active');
     }
-})
+});
 
 
 //PROJECT 2
