@@ -44,8 +44,9 @@ body{
 #info{
     display: grid;
     grid-template-columns: 1fr, 1fr;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 9%;
+    margin-right: 9%;
+    padding: 10px;
 }
 
 #info div {
@@ -53,7 +54,7 @@ body{
     background: rgb(241, 229, 253);
     margin: 0.5rem;
     border-radius: 10px;
-    color: rgb(252, 130, 236);
+    color: rgb(255, 0, 221);
     font-size: 1.2rem;
     text-align: center;
 }
