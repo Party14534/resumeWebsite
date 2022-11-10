@@ -5,7 +5,7 @@
 }
 
 body{
-    padding: 5px;
+    padding: 8px;
     /*justify-content: center;*/ 
     align-items: center;
 }
@@ -44,6 +44,8 @@ body{
 #info{
     display: grid;
     grid-template-columns: 1fr, 1fr;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #info div {
