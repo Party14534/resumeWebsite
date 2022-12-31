@@ -79,7 +79,7 @@ let data = [
 const info = document.querySelector('#info');
 
 let details = data.map(function(item){
-    return '<div>' + item.face + item.name + ' is ' + item.age + ' years old ' +
+    return '<div>' + item.face + ' ' +  item.name + ' is ' + item.age + ' years old ' +
     '</div>';
     
 });
