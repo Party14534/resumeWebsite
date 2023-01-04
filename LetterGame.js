@@ -59,7 +59,44 @@ document.addEventListener("click", function(e){
             if(correctGuess[index] == arr[index].length){count--; checkWin();}
         }
 }});
+document.addEventListener("click", function(e){
+    const clicked = e.target.closest("#key");
+    if(clicked){
+        let key = clicked.getAttribute('value');
+        if(playState==0){
+            if(firstEnter.innerHTML.length < 5 && key.length == 1){
+                let prevHtml = firstEnter.innerHTML;
+                firstEnter.innerHTML = prevHtml + key;
+            }
+        } else if(playState==1){
+            if(secondEnter.innerHTML.length < 5 && key.length == 1){
+                let prevHtml = secondEnter.innerHTML;
+                secondEnter.innerHTML = prevHtml + key;
+            }
+        }
+    }});
 
+document.addEventListener("click", function(e){
+    const clicked = e.target.closest("#specialKey");
+    if(clicked){
+        let key = clicked.getAttribute('value');
+        if(playState==0){
+            if((key == 'Delete') && (firstEnter.innerHTML.length > 0)){
+                firstEnter.innerHTML = firstEnter.innerHTML.slice(0,-1);
+            } else if((key == 'Enter') && (firstEnter.innerHTML.length ==5)){
+                startGame();
+                playState++;
+            } else if((key == 'Enter') && (firstEnter.innerHTML.length != 5)){
+                document.getElementById('errorMsg').classList.remove('invisible');
+            }
+        } else if(playState==1){
+            if (key == 'Enter'){
+                checkGuess();
+            } else if((key == 'Delete') && (secondEnter.innerHTML.length > 0)){
+                secondEnter.innerHTML = secondEnter.innerHTML.slice(0,-1);
+            }
+        } else {if(key == 'Enter') this.location.reload();}
+    }});
 
 
 function mapArr(){
@@ -117,6 +154,8 @@ function displayWinScreen(){
     gameScreen.innerHTML = ('<br><a id="winScreen">You win!!!</a><br><br>\
     <a id="winScreen">Press Enter to Play Again!</a><br><br>');
     gameScreen.classList.add("mainDivAddOn");
+    document.getElementById('keyboard').classList.add("mainDivAddOn");
+    document.getElementById('gameScreen').classList.add("mainDivAddOn");
 }
 
 function buildWords(){
@@ -170,6 +209,28 @@ function buildWords(){
                         }
                     }
                 }
+            }
+        }
+    }
+    sortArr();
+}
+
+function sortArr(){
+    for(let i = 0; i < count; i++){
+        for(let j = 0; j < count; j++){
+            if(arr[j].length < arr[i].length){
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    for(let i = 0; i < count; i++){
+        for(let j = 0; j < count; j++){
+            if((arr[j].length == arr[i].length) && (arr[j] > arr[i])){
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
     }

@@ -11,7 +11,7 @@
     <style>
         .article{
             display: block;
-            width: 70%;
+            width: 98%;
             height: 100%;
             background: rgb(255, 255, 255);
             margin-left: auto;
@@ -23,10 +23,6 @@
         iframe{
             display:block;
             margin: 0 auto;
-        }
-        form{
-            position:-webkit-sticky;
-            position: sticky;
         }
         .center{
             font-family:'Courier New';
@@ -54,17 +50,20 @@
         }
 
         .button1{
+            display: block;
             background: transparent url(https://zachariahdellimore.netlify.app/webapps);
             background-color: aliceblue;
             border-radius: 10px;
             padding: 5px;
-
+            align-self: center;
         }
         .button2{
+            display: block;
             background: transparent url(https://zachariahdellimore.netlify.app/webapps);
             background-color: aliceblue;
             border-radius: 10px;
             padding: 5px;
+            align-self: center;
         }
         .container{
             position: absolute;
@@ -81,31 +80,37 @@
         .header2{
             font-size: x-large;
         }
+        #rules{
+            align-self: center;
+            display: inline-block;
+            text-align: center;
+        }
         
 
     </style>
     <body style="background-color: rgb(67, 67, 78)"><!--rgb(236, 238, 245)-->
         <section>
-            <div class="container">
-                <form>
-                <input id="About Me"class="button1" type="image" src="media/AboutMeIcon.png" name = "About Me" width="6%" height="5%" alt="WebApp" formaction="index.html">
-                </form>
-                <br>
-                <form>
-                <input id="webApp"class="button2" type="image" src="media/webAppIcon.png" name = "My Web Apps" width="6%" height="5%" alt="WebApp" formaction="webApps.html">  
-                </form>
-            </div>
             <div class="container2">
                 <article class="article">
                     <br><br>
                     <h1 class="center header">5 Letter Game</h1>
-                    <p class="font">Rules: <br><br>
-                    1. Enter five letters<br><br>
-                    2. Try to enter every english word you can make with those letters</p>
-                    <article class="GameScreen">
+                    <h1 class="center"><a href="mailto: zachariahdellimore03@gmail.com"><img alt="Email" src="media/emailIcon.png" 
+                        width="25px" height="25px"></a>  <a href="https://www.linkedin.com/in/zachariah-dellimore-8630ba161/"><img alt="LinkedIn" src="media/linkedinIcon.png" 
+                            width="25px" height="25px"></a>  <a href="https://github.com/Party14534"><img alt="Guihub" src="media/githubIcon.png" 
+                                width="25px" height="25px"></a></h1>
+                    <p class="font" id="rules">Rules: <br><br>
+                    1. Enter five letters to generate every english word you can make with those letters<br><br>
+                    2. Try to enter every english word you can make with those letters<br><br>
+                    3. If you need a hint you can click a hidden word to reveal it letter by letter</p>
+                    <article class="GameScreen" id="gameScreen">
                         <div class="center" id="mainDiv">
                             <div id="enterBox"><a id="firstEnter" class="center"></a></div><br><br>
                             <a class="invisible" id="errorMsg" style="color:red">Please input 5 letters with no spaces or special characters<br><br></a>
+                        </div>
+                        <div class="center" id="keyboard">
+                            <a id="key" value="q">Q</a><a id="key" value="w">W</a><a id="key" value="e">E</a><a id="key" value="r">R</a><a id="key" value="t">T</a><a id="key" value="y">Y</a><a id="key" value="u">U</a><a id="key" value="i">I</a><a id="key" value="o">O</a><a id="key" value="p">P</a><br>
+                            <a id="key" value="a">A</a><a id="key" value="s">S</a><a id="key" value="d">D</a><a id="key" value="f">F</a><a id="key" value="g">G</a><a id="key" value="h">H</a><a id="key" value="j">J</a><a id="key" value="k">K</a><a id="key" value="l">L</a><br>
+                            <a id="specialKey" value="Enter">ENTR</a><a id="key" value="z">Z</a><a id="key" value="x">X</a><a id="key" value="c">C</a><a id="key" value="v">V</a><a id="key" value="b">B</a><a id="key" value="n">N</a><a id="key" value="m">M</a><a id="specialKey" value="Delete">DEL</a><br>
                         </div>
                         <script src="LetterGame.js"></script>
                     </article>
