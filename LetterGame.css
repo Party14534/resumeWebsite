@@ -63,7 +63,7 @@
 #enterBox{
     display: inline-block;
     width: 50%;
-    height: 1.3rem;
+    height: 1.5rem;
     outline: 1px solid black;
     align-self: center;
     align-items: center;
@@ -97,7 +97,7 @@
 #key{
     display: inline-flex;
     font-size: clamp(0.6rem, 100%, 1.5rem);
-    outline: 1px solid grey;
+    outline: 1px solid black;
     width: clamp(4%, 4%, 7%);
     height: clamp(2rem, 2rem, 2.5rem);
     padding: 5px;
@@ -111,7 +111,7 @@
 #specialKey{
     display: inline-flex;
     font-size: clamp(0.6rem, 0.8rem, 1.5rem);
-    outline: 1px solid grey;
+    outline: 1px solid black;
     width: clamp(5%, 8.5%, 10%);
     height: clamp(2rem, 2rem, 3.5rem);
     padding: 5px;
