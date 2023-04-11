@@ -113,8 +113,20 @@ function mapArr(){
         correctGuess[index] = temp;
         return string + '</div>';
     });
+    let stringArray = string.split("");
+    for(let i = 0; i < 5; i++){
+        for(let j = 0; j < 5; j++){
+            if(stringArray[j] > stringArray[i]){
+                let temp = stringArray[i];
+                stringArray[i] = stringArray[j];
+                stringArray[j] = temp;
+            }
+        }
+    }
+    string = stringArray.join(" ");
     gameScreen.innerHTML = ('<div id="enterBox"><a id="secondEnter" class="center"></a></div>\
     <br><br>' + screenArr.join('\n'));
+    gameScreen.innerHTML = '<a id="originalLetters">'+ string + "</a><br><br>" + gameScreen.innerHTML;
     secondEnter = document.getElementById('secondEnter');
 }
 
@@ -261,7 +273,19 @@ function startGame(){
             correctGuess[index] = temp;
             return string + '</div>';
         });
+        let stringArray = string.split("");
+        for(let i = 0; i < 5; i++){
+            for(let j = 0; j < 5; j++){
+                if(stringArray[j] > stringArray[i]){
+                    let temp = stringArray[i];
+                    stringArray[i] = stringArray[j];
+                    stringArray[j] = temp;
+                }
+            }
+        }
+        string = stringArray.join(" ");
         gameScreen.innerHTML = ('<div id="enterBox"><a id="secondEnter" class="center"></a></div>\
         <br><br>' + screenArr.join('\n'));
+        gameScreen.innerHTML = '<a id="originalLetters">'+ string + "</a><br><br>" + gameScreen.innerHTML;
         secondEnter = document.getElementById('secondEnter');
 }

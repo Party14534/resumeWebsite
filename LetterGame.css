@@ -21,8 +21,8 @@
     box-shadow: 0 0 10px #9ecaed;
 }
 .GameScreen{
-    display: block;
-    width: clamp(93%, 93%, 97%);
+    display: inline-block;
+    width: clamp(97%, 97%, 98%);
     height: 100%;
     background: rgb(9, 4, 10);
     padding: 10px;
@@ -94,6 +94,7 @@
 }
 #keyboard{
     outline: 1px solid beige;
+    width: 100%;
     text-align: center;
     align-self: center;
     align-items: center;
@@ -102,8 +103,8 @@
     display: inline-flex;
     font-size: clamp(0.6rem, 100%, 1.5rem);
     outline: 1px solid beige;
-    width: clamp(4%, 4%, 7%);
-    height: clamp(2rem, 2rem, 2.5rem);
+    width: clamp(3%, -0.875rem + 8.333vw, 5vw);
+    height: clamp(3rem, 4rem, 4.5rem);
     padding: 5px;
     margin: 3px;
     align-items: center;
@@ -116,8 +117,8 @@
     display: inline-flex;
     font-size: clamp(0.6rem, 0.8rem, 1.5rem);
     outline: 1px solid beige;
-    width: clamp(5%, 8.5%, 10%);
-    height: clamp(2rem, 2rem, 3.5rem);
+    width: clamp(8.25%, -0.875rem + 8.333vw, 120vw);
+    height: clamp(3.5rem, 4rem, 5rem);
     padding: 5px;
     margin: 4px;
     align-items: center;
@@ -126,6 +127,10 @@
     top: 50%;
     text-align: center;
 }
+#originalLetters{
+    font-size: 1.5rem;
+}
+
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
